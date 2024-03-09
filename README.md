@@ -1,21 +1,68 @@
->Fork至hoxu/gitstats
+> Fork 至 hanzhichao/gitstats
+
+官网介绍：http://gitstats.sourceforge.net/
 
 ## 更改
-修改并适配了Python3
-1. 修改print -> print()
-2. 修改map() -> list(map())
+
+修改并适配了 Python3
+
+1. 修改 print -> print()
+2. 修改 map() -> list(map())
 3. 修改 Pipline output -> output.decode()
 4. 添加了部分中文注释
 
-## 使用方式
-1. 安装gnuplot，已生成交互式图表，Mac OS可以使用`brew install gnuplot`安装
-2. 进入项目目录，使用以下命令运行。
+## 安装
+
+- Ubuntu
+
+```bash
+apt-get install gitstats
 ```
+
+- CentOS:
+
+```bash
+yum install gitstats
+```
+
+- Mac
+
+```bash
+brew install gnuplot
+```
+
+## 使用方式
+
+### 1. 克隆 gitstats 源码库
+
+打开 gitbash 或者其他 git 客户端，输入如下命令：
+
+```bash
+git clone git://github.com/chandq/gitstats.git
+```
+
+### 2. 下载完成后，进入 gitstats 目录，将 gitstats 拷贝为 gitstats.py 文件
+
+```bash
+cp gitstats gitstats.py
+```
+
+### 3. 然后执行统计命令
+
+语法：
+
+```bash
 python3 gitstats  Git项目目录  报告目录
 ```
 
+实际操作：
+
+```bash
+python gitstats.py ../xxx_pro/ ./reports
+```
+
 ## 报告示例
-![](https://tva1.sinaimg.cn/large/006y8mN6ly1g82ni5c6tnj30s80h176c.jpg)
 
-![](https://tva1.sinaimg.cn/large/006y8mN6ly1g82nh49rorj30s70llq4i.jpg)
-
+![stats-overview](./assets/stats-overview.png)
+![stats-activity](./assets/stats-activity.png)
+![stats-files](./assets/stats-files.png)
